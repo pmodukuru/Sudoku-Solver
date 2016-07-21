@@ -1,0 +1,24 @@
+/*
+There are several parts to this project:
+1) The GUI along with the executable solution for the entire simulation suite is located in Sudoku_C-sharp final. The GUI was created using Visual Studio on a Windows machine, so it may require windows to directly operate.
+
+2)The three files sudoku.c, main_data.c, sudoku.h, are the raw files that we used to create and test the functions that we implement. sudoku.c is the file that contains all of the functions that we used. The commented out main function in this file can be used to test the generate and different solve functions. 
+	To test these functions, uncomment out the main and this is the format:
+	-have 3 inputs
+	1)file containing sudoku
+	2)output file to write to
+	3)1 or 2, 1 to choose backtracking, 2 to choose layman
+	
+	To test generate
+	1)number of holes you want to place in sudoku
+		-range is <=60, otherwise the function will take too long or the returned sudoku wont be unique. (there is no check for input since this function was modified for the GUI where there are oly 4 choices of difficulty levels).
+	2)output file that will contain sudoku
+
+3) main_data.c was the main file that we kept modifying to generate the data we used for analysis of algorithms. It requires 2 inputs
+	1) input difficulty (48-easy, 51-medium, 54-hard, 57-evil)
+		-the generate function will return a sudoku with around those numbers of holes (only approximate in order to allow function to generate faster, as well as give more variety to the puzzles generated)
+	2) the file that will contain runtime data
+
+It was a pleasure to make this project and we hope you are as proud of our work as we are. We learned a lot through the semester and plan to use whatever we learned to make our next project even better and more impressive. Thank you.
+
+*/

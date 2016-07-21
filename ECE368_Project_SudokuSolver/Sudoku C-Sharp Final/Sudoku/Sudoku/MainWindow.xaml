@@ -1,0 +1,346 @@
+﻿<Controls:Window
+    x:Class="Sudoku.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:Elysium.Controls;assembly=Elysium"
+        xmlns:params="http://schemas.codeplex.com/elysium/params" x:Name="window" 
+        WindowStartupLocation="CenterScreen"
+        params:Design.Theme="Light" 
+        params:Manager.Theme="Light" FontSize="16" FontFamily="Segoe UI Light" Title="Sudoku Solver" Foreground="#FF4D4D4D" Width="654.5" Height="636.261" HorizontalAlignment="Left" VerticalAlignment="Top"  >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TabControl x:Name="MainTabControl" Margin="10,9,0,0" VerticalAlignment="Top" TabIndex="0">
+            <TabItem Header="Game" TabIndex="0">
+
+                <Grid Background="#FFFFFFFF"  ShowGridLines="True" HorizontalAlignment="Left" VerticalAlignment="Top" Height="500" Width="513" >
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Border Grid.Row="0" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Margin="0">
+                        <Grid Background="#FFFFFFFF"  ShowGridLines="True" >
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="A_0_0" Grid.Row="0" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="A_0_1" Grid.Row="0" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="A_0_2" Grid.Row="0" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="A_1_0" Grid.Row="1" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="A_1_1" Grid.Row="1" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="A_1_2" Grid.Row="1" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="A_2_0" Grid.Row="2" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="A_2_1" Grid.Row="2" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="A_2_2" Grid.Row="2" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Margin="0">
+                        <Grid Background="#FFFFFFFF"  ShowGridLines="True" >
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="B_0_0" Grid.Row="0" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="B_0_1" Grid.Row="0" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="B_0_2" Grid.Row="0" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="B_1_0" Grid.Row="1" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="B_1_1" Grid.Row="1" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="B_1_2" Grid.Row="1" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="B_2_0" Grid.Row="2" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="B_2_1" Grid.Row="2" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="B_2_2" Grid.Row="2" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Margin="0">
+                        <Grid Background="#FFFFFFFF"  ShowGridLines="True" >
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="C_0_0" Grid.Row="0" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="C_0_1" Grid.Row="0" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="C_0_2" Grid.Row="0" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="C_1_0" Grid.Row="1" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="C_1_1" Grid.Row="1" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="C_1_2" Grid.Row="1" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="C_2_0" Grid.Row="2" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="C_2_1" Grid.Row="2" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="C_2_2" Grid.Row="2" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Margin="0">
+                        <Grid Background="#FFFFFFFF"  ShowGridLines="True" >
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="D_0_0" Grid.Row="0" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="D_0_1" Grid.Row="0" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="D_0_2" Grid.Row="0" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="D_1_0" Grid.Row="1" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="D_1_1" Grid.Row="1" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="D_1_2" Grid.Row="1" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="D_2_0" Grid.Row="2" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="D_2_1" Grid.Row="2" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="D_2_2" Grid.Row="2" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Margin="0">
+                        <Grid Background="#FFFFFFFF"  ShowGridLines="True" >
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="E_0_0" Grid.Row="0" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="E_0_1" Grid.Row="0" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="E_0_2" Grid.Row="0" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="E_1_0" Grid.Row="1" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="E_1_1" Grid.Row="1" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="E_1_2" Grid.Row="1" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="E_2_0" Grid.Row="2" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="E_2_1" Grid.Row="2" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="E_2_2" Grid.Row="2" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Margin="0">
+                        <Grid Background="#FFFFFFFF"  ShowGridLines="True" >
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="F_0_0" Grid.Row="0" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="F_0_1" Grid.Row="0" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="F_0_2" Grid.Row="0" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="F_1_0" Grid.Row="1" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="F_1_1" Grid.Row="1" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="F_1_2" Grid.Row="1" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="F_2_0" Grid.Row="2" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="F_2_1" Grid.Row="2" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="F_2_2" Grid.Row="2" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="2" Grid.Column="0" BorderBrush="Blue" BorderThickness="1" Margin="0">
+                        <Grid Background="#FFFFFFFF"  ShowGridLines="True" >
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="G_0_0" Grid.Row="0" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="G_0_1" Grid.Row="0" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="G_0_2" Grid.Row="0" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="G_1_0" Grid.Row="1" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="G_1_1" Grid.Row="1" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="G_1_2" Grid.Row="1" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="G_2_0" Grid.Row="2" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="G_2_1" Grid.Row="2" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="G_2_2" Grid.Row="2" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="1" BorderBrush="Blue" BorderThickness="1" Margin="0">
+                        <Grid Background="#FFFFFFFF"  ShowGridLines="True" >
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="H_0_0" Grid.Row="0" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="H_0_1" Grid.Row="0" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="H_0_2" Grid.Row="0" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="H_1_0" Grid.Row="1" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="H_1_1" Grid.Row="1" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="H_1_2" Grid.Row="1" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="H_2_0" Grid.Row="2" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="H_2_1" Grid.Row="2" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="H_2_2" Grid.Row="2" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="2" BorderBrush="Blue" BorderThickness="1" Margin="0">
+                        <Grid Background="#FFFFFFFF"  ShowGridLines="True" >
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="I_0_0" Grid.Row="0" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="I_0_1" Grid.Row="0" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="I_0_2" Grid.Row="0" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="I_1_0" Grid.Row="1" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="I_1_1" Grid.Row="1" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="I_1_2" Grid.Row="1" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                            <TextBox Name="I_2_0" Grid.Row="2" Grid.Column="0" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">1</TextBox>
+                            <TextBox Name="I_2_1" Grid.Row="2" Grid.Column="1" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">2</TextBox>
+                            <TextBox Name="I_2_2" Grid.Row="2" Grid.Column="2" BorderBrush="Blue" HorizontalAlignment="Center" BorderThickness="0" FontSize="20" FontFamily="Helvetica Neue" FontWeight="Light">3</TextBox>
+
+                        </Grid>
+                    </Border>
+                  
+                    
+                </Grid>
+
+             
+            </TabItem>
+
+            <TabItem Header="Performance" TabIndex="1">
+                <Grid Background="#FFFFFFFF">
+                    <TextBlock x:Name="textBlock0" HorizontalAlignment="Left" Margin="24,39,0,-1" TextWrapping="Wrap" Text="Please refer to performance report for analysis results." VerticalAlignment="Top" FontSize="20"/>
+                 </Grid>
+            </TabItem>
+
+            <TabItem Header="Credits" TabIndex="2">
+                <Grid Background="#FFFFFFFF">
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="40,38,0,0" TextWrapping="Wrap" Text="Piyush Sharma" VerticalAlignment="Top" FontSize="20"/>
+                    <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="195,38,0,0" TextWrapping="Wrap" Text="Prady Mudukuru" VerticalAlignment="Top" FontSize="20"/>
+                    <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="40,96,0,0" TextWrapping="Wrap" Text="Pushkal vaid" VerticalAlignment="Top" FontSize="20"/>
+                    <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="195,96,0,0" TextWrapping="Wrap" Text="Pujitha Desiraju" VerticalAlignment="Top" FontSize="20"/>
+                    <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="40,149,0,0" TextWrapping="Wrap" Text="Martin Montenegro" VerticalAlignment="Top" FontSize="20"/>
+
+                </Grid>
+            </TabItem>
+
+
+        </TabControl>
+
+        <Controls:ProgressRing HorizontalAlignment="Right" Margin="0,14,11,0" VerticalAlignment="Top" State="Indeterminate" FlowDirection="RightToLeft"      Height="39" Width="30" />
+        <TextBlock x:Name="StatusText" HorizontalAlignment="Left" Margin="10,0,0,3" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Right" FontSize="14" Text="Press Generate New  button for New Game"/>
+
+        <Button x:Name="buttonGenerate" Content="Generate New" HorizontalAlignment="Left" Margin="540,178,0,0" VerticalAlignment="Top" Click="buttonGenerate_Click"/>
+        <Button x:Name="buttonSolve" Content="Solve Sudoku" HorizontalAlignment="Left" Margin="540,342,0,0" VerticalAlignment="Top" Width="94" Click="buttonSolve_Click"/>
+        <Grid>
+            <RadioButton x:Name="LevelEasy" Content="Easy" HorizontalAlignment="Left" Margin="540,75,0,0" VerticalAlignment="Top" IsChecked="True"></RadioButton>
+            <RadioButton x:Name="LevelMedium" Content="Medium" HorizontalAlignment="Left" Margin="540,100,0,0" VerticalAlignment="Top"></RadioButton>
+            <RadioButton x:Name="LevelHard" Content="Hard" HorizontalAlignment="Left" Margin="540,125,0,0" VerticalAlignment="Top"></RadioButton>
+            <RadioButton x:Name="LevelEvil" Content="Evil" HorizontalAlignment="Left" Margin="540,150,0,0" VerticalAlignment="Top"></RadioButton>
+        </Grid>
+
+        <Grid>
+            <RadioButton x:Name="SolveBackTrack" Content="Backtrack" HorizontalAlignment="Left" Margin="540,290,0,0" VerticalAlignment="Top" IsChecked="True"></RadioButton>
+            <RadioButton x:Name="SolveLayman" Content="Layman" HorizontalAlignment="Left" Margin="540,315,0,0" VerticalAlignment="Top"></RadioButton>
+
+        </Grid>
+
+
+    </Grid>
+
+</Controls:Window>
